@@ -2,7 +2,34 @@
 
 ### Tasks Completed: ###
 
+### Implementation ###
+- Set up two EC2 instances for Ansible and Observability with AMI specified. Configured bootstrap to give CloudWatch visibility and install SSM agent for better security and avoid having to manage SSH keys
+- Configure Observability inbound ports 3000 and 9090
 
+### Assumptions ###
+- Backend for tfstate either in S3 or TF enterprise/cloud
+- AWS VPC and public/private subnets set up
+
+### What still needs to be done ###
+- Install Ansible in bootstrap and configure 
+- Install and configure Prometheus, Grafana and node exporter
+- Playbook(s)
+
+### Time spent ###
+
+- Approx 3 Hours
+
+### What issues occurred ###
+
+- Difficult to determine what balance to strike between production deploy (and all the time consuming rabbit holes) vs demonstrating
+overall approach
+- Forgot to fork initially (!) and fixed after the fact. Then git started hanging because my session dropped and I couldn't see the login window behind my screen. 
+- Created a readme conflict because I forgot to sync up after editing in the web GUI. 
+
+### Tech Debt and Improvements ###
+
+- Both hard to say within the scope of this exercise, everything is
+kind of a work in progress. The idea is to keep things as modular and clear as possible.
 
 ### Task 1 - Ansible Server ###
 
