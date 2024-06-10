@@ -1,5 +1,9 @@
 # Tech Test for Cary Galburt
 
+### Tasks Completed: ###
+
+
+
 ### Task 1 - Ansible Server ###
 
 - Use Terraform to create a `Amazon Linux 2 Kernel 5.10 AMI 2.0.20240529.0 x86_64 HVM gp2` EC2 instance AND deploy ansible.
