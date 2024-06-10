@@ -1,32 +1,35 @@
-# Tech Test
-AWS / Terraform / Ansible / Observability test
+# Tech Test for Cary Galburt
 
-## Stories ##
+### Tasks Completed: ###
 
-As an SRE <br>
-I want to automate the deployment/configuration of an observability stack based on prometheus and grafana <br>
-So that I can make myself a cup of coffee and not have to do all the work again! 🤣 <br>
+### Implementation ###
+- Set up two EC2 instances for Ansible and Observability with AMI specified. Configured bootstrap to give CloudWatch visibility and install SSM agent for better security and avoid having to manage SSH keys
+- Configure Observability inbound ports 3000 and 9090
 
-As an SRE <br>
-I want to automate the deployment of prometheus scrape target configuration <br>
-So that I can make myself a 2nd cup of coffee! 😂 <br>
+### Assumptions ###
+- Backend for tfstate either in S3 or TF enterprise/cloud
+- AWS VPC and public/private subnets set up
 
-## Requirements ##
+### What still needs to be done ###
+- Install Ansible in bootstrap and configure 
+- Install and configure Prometheus, Grafana and node exporter
+- Playbook(s)
 
-- Use Terraform to create two EC2 instances.
-- Use Ansible to deploy the applications.
-- Use Ansible to deploy the configurations.
-- Use Ansible Community Collections wherever possible;
-  - [community.general.terraform](https://docs.ansible.com/ansible/latest/collections/community/general/terraform_module.html)
-  - [Ansible Collection for Prometheus](https://github.com/prometheus-community/ansible)
-  - [Ansible Collection for Grafana](https://github.com/grafana/grafana-ansible-collection)
-- Fork this repository and create a suitable directory structure to hold the following;
-  - Hcl to create the Ansible Server.
-  - Playbook and hcl to create / configure the Observability server.
-  - As you work through the tasks **create individual commits for each step**.
-  - Create a pull request back to this repo to submit your results.  Please **do not** squash the commits.
-  - Deployment instructions in the READme.md.
-- Do **only** as much as **you** want to do. **Do not** feel that you have to complete **all** the tasks, although Task 4 is quite important.
+### Time spent ###
+
+- Approx 3 Hours
+
+### What issues occurred ###
+
+- Difficult to determine what balance to strike between production deploy (and all the time consuming rabbit holes) vs demonstrating
+overall approach
+- Forgot to fork initially (!) and fixed after the fact. Then git started hanging because my session dropped and I couldn't see the login window behind my screen. 
+- Created a readme conflict because I forgot to sync up after editing in the web GUI. 
+
+### Tech Debt and Improvements ###
+
+- Both hard to say within the scope of this exercise, everything is
+kind of a work in progress. The idea is to keep things as modular and clear as possible.
 
 ### Task 1 - Ansible Server ###
 
