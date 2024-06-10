@@ -1,32 +1,4 @@
-# Tech Test
-AWS / Terraform / Ansible / Observability test
-
-## Stories ##
-
-As an SRE <br>
-I want to automate the deployment/configuration of an observability stack based on prometheus and grafana <br>
-So that I can make myself a cup of coffee and not have to do all the work again! 🤣 <br>
-
-As an SRE <br>
-I want to automate the deployment of prometheus scrape target configuration <br>
-So that I can make myself a 2nd cup of coffee! 😂 <br>
-
-## Requirements ##
-
-- Use Terraform to create two EC2 instances.
-- Use Ansible to deploy the applications.
-- Use Ansible to deploy the configurations.
-- Use Ansible Community Collections wherever possible;
-  - [community.general.terraform](https://docs.ansible.com/ansible/latest/collections/community/general/terraform_module.html)
-  - [Ansible Collection for Prometheus](https://github.com/prometheus-community/ansible)
-  - [Ansible Collection for Grafana](https://github.com/grafana/grafana-ansible-collection)
-- Fork this repository and create a suitable directory structure to hold the following;
-  - Hcl to create the Ansible Server.
-  - Playbook and hcl to create / configure the Observability server.
-  - As you work through the tasks **create individual commits for each step**.
-  - Create a pull request back to this repo to submit your results.  Please **do not** squash the commits.
-  - Deployment instructions in the READme.md.
-- Do **only** as much as **you** want to do. **Do not** feel that you have to complete **all** the tasks, although Task 4 is quite important.
+# Tech Test for Cary Galburt
 
 ### Task 1 - Ansible Server ###
 
