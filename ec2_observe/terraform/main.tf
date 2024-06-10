@@ -58,14 +58,22 @@ data "template_cloudinit_config" "observe_node_config" {
 }
 
 resource "aws_security_group" "observe_node_group" {
-   name        = "observe Node Security Group"
-   description = "observe Node Security Group"
+   name        = "Observe Node Security Group"
+   description = "Observe Node Security Group"
    vpc_id      = var.vpc_id
 
    ingress {
-       from_port       = 0
-       to_port         = 0
-       protocol        = "-1"
+       from_port       = 3000
+       to_port         = 3000
+       protocol        = "tcp"
+       cidr_blocks     = ["0.0.0.0/0"]
+   }
+
+   ingress {
+       from_port       = 9090
+       to_port         = 9090
+       protocol        = "tcp"
+       cidr_blocks     = ["0.0.0.0/0"]
    }
 
    egress {
